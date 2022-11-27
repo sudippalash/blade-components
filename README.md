@@ -1,4 +1,4 @@
-## blade-components comes to Laravel
+## blade-components
 
 ![alt text](https://github.com/sudippalash/blade-components/blob/master/img.jpg?raw=true)
 
@@ -8,7 +8,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 
 
-`blade-components` is a role management package of `Laravel` that provides options to manage role.
+`blade-components` for ignoring same code rewriting habit.
 
 
 ## Install
