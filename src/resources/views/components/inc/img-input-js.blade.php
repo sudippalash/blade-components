@@ -11,7 +11,7 @@
             };
             reader.readAsDataURL(input.files[0]);
         } else {
-            removeUpload();
+            spRemoveImage(id);
         }
     }
     function spRemoveImage(id) {
