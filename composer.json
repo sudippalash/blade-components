@@ -1,0 +1,33 @@
+{
+    "name": "sudippalash/blade-components",
+    "description": "Laravel package for Media Input field",
+    "keywords": [
+        "Sudip",
+        "Laravel Media Input field",
+        "Media Input field",
+        "Laravel"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sudip Palash",
+            "email": "palash.sudip@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "Sudip\\BladeComponents\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sudip\\BladeComponents\\Providers\\AppServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
