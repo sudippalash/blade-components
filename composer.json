@@ -1,10 +1,10 @@
 {
     "name": "sudippalash/blade-components",
-    "description": "Laravel package for Media Input field",
+    "description": "Laravel package for provides a set of blade components",
     "keywords": [
         "Sudip",
-        "Laravel Media Input field",
-        "Media Input field",
+        "Laravel provides a set of blade components",
+        "Provides a set of blade components",
         "Laravel"
     ],
     "type": "library",
