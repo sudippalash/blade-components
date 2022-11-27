@@ -14,10 +14,9 @@ class AppServiceProvider extends ServiceProvider
         );
     }
 
-
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views/components', 'spcomponents');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'blade-components');
 
         $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'blade-components');
 

@@ -1,4 +1,4 @@
-@include('spcomponents::inc.img-input-css')
+@include('blade-components::components.inc.img-input-css')
 
 <div class="form-group">
     <label>{{ $inputLabel }}</label>
@@ -25,4 +25,4 @@
     @enderror
 </div>
 
-@include('spcomponents::inc.img-input-js')
+@include('blade-components::components.inc.img-input-js')

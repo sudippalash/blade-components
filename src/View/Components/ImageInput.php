@@ -39,6 +39,6 @@ class ImageInput extends Component
         if (!in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
             $platform = 'bootstrap4';
         }
-        return view('spcomponents::' . $platform . '.image-input');
+        return view('blade-components::components.' . $platform . '.image-input');
     }
 }

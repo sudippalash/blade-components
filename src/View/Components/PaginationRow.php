@@ -57,6 +57,6 @@ class PaginationRow extends Component
         if (!in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
             $platform = 'bootstrap4';
         }
-        return view('spcomponents::' . $platform . '.pagination-row');
+        return view('blade-components::components.' . $platform . '.pagination-row');
     }
 }

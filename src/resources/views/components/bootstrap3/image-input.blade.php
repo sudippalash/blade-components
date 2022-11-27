@@ -1,4 +1,4 @@
-@include('spcomponents::inc.img-input-css')
+@include('blade-components::components.inc.img-input-css')
 
 <div class="form-group{{ $errors->has($inputName) ? ' has-error' : '' }}">
     <label>{{ $inputLabel }}</label>
@@ -25,5 +25,5 @@
     @enderror
 </div>
 
-@include('spcomponents::inc.img-input-js')
+@include('blade-components::components.inc.img-input-js')
 
