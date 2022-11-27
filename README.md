@@ -8,7 +8,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 
 
-`blade-components` for ignoring same code rewriting habit.
+This package provides a set of blade components
 
 
 ## Install
