@@ -8,7 +8,6 @@ class FileInput extends Component
 {
     public $fileId;
     public $inputName;
-    public $inputLabel;
     public $required;
     public $multiple;
     public $filePath;
@@ -18,11 +17,10 @@ class FileInput extends Component
      *
      * @return void
      */
-    public function __construct($id = 'file', $name = 'file', $label = 'File', $required = null, $multiple = null, $path = null)
+    public function __construct($id = 'file', $name = 'file', $required = null, $multiple = null, $path = null)
     {
         $this->fileId = $id;
         $this->inputName = $name;
-        $this->inputLabel = $label;
         $this->required = $required;
         $this->multiple = $multiple;
         $this->filePath = $path;

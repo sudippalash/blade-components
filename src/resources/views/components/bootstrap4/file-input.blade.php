@@ -1,19 +1,17 @@
-<div class="form-group" id="{{ $fileId }}">
-    <label>{{ $inputLabel }}</label>
-    <input type="hidden" name="{{ $fileId }}_is_removed" id="{{ $fileId }}_is_removed" value="0" />
-    <input type="file" class="form-control{{ $errors->has($inputName) ? ' is-invalid' : '' }}" id="{{ $fileId }}_file" name="{{ $inputName }}" {{ $multiple }} {{ $required }}>
+<input type="hidden" name="{{ $fileId }}_is_removed" id="{{ $fileId }}_is_removed" value="0" />
+<input type="file" class="form-control{{ $errors->has($inputName) ? ' is-invalid' : '' }}" id="{{ $fileId }}_file" name="{{ $inputName }}" {{ $multiple }} {{ $required }}>
 
-    @error($inputName)
-        <span class="invalid-feedback d-block">{{ $message }}</span>
-    @enderror
+@error($inputName)
+    <span class="invalid-feedback d-block">{{ $message }}</span>
+@enderror
 
-    <div id="{{ $fileId }}_file_upload_content" @if(!$filePath)style="display:none;"@endif>
-        @if ( $filePath)
-            <a target="_blank" href="{{ $filePath }}">{{ $filePath }}</a>
-        @endif
-        <a style="text-decoration: none; color: #ffffff;" class="badge badge-danger" href="javascript:void(0);" onclick="spRemoveFile('{{ $fileId }}')" title="Delete">x</a>
-    </div>
+<div id="{{ $fileId }}_file_upload_content" @if(!$filePath)style="display:none;"@endif>
+    @if ( $filePath)
+        <a target="_blank" href="{{ $filePath }}">{{ $filePath }}</a>
+    @endif
+    <a style="text-decoration: none; color: #ffffff;" class="badge badge-danger" href="javascript:void(0);" onclick="spRemoveFile('{{ $fileId }}')" title="Delete">x</a>
 </div>
+    
 <script>
     function spRemoveFile(id) {
         document.getElementById(`${id}_is_removed`).value = 1;
