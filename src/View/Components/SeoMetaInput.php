@@ -9,7 +9,7 @@ class SeoMetaInput extends Component
     public $meta_title;
     public $meta_keywords;
     public $meta_description;
-    public $data;
+    public $seoData;
 
     /**
      * Create a new component instance.
@@ -21,7 +21,7 @@ class SeoMetaInput extends Component
         $this->meta_title = $title_field;
         $this->meta_keywords = $keywords_field;
         $this->meta_description = $description_field;
-        $this->data = $data;
+        $this->seoData = $data;
     }
 
     /**
@@ -36,5 +36,10 @@ class SeoMetaInput extends Component
             $platform = 'bootstrap4';
         }
         return view('blade-components::components.' . $platform . '.seo-meta-input');
+    }
+    
+    public function getValue($key)
+    {
+        return old($key, isset($this->seoData) ? $this->seoData->{$key} : '');
     }
 }

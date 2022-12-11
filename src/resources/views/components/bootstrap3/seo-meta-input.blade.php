@@ -3,7 +3,7 @@
 
     <div class="form-group{{ $errors->has($meta_title) ? ' has-error' : '' }}">
         <label>{{ trans('blade-components::sp_blade_components.meta_title') }}:</label>
-        <input type="text" class="form-control" name="{{ $meta_title }}" value="{{ old($meta_title, isset($data) ? $data->meta_title : '') }}">
+        <input type="text" class="form-control" name="{{ $meta_title }}" value="{{ $getValue($meta_title) }}">
 
         @if ($errors->has($meta_title))
             <span class="help-block">{{ $errors->first($meta_title) }}</span>
@@ -12,7 +12,7 @@
 
     <div class="form-group{{ $errors->has($meta_keywords) ? ' has-error' : '' }}">
         <label>{{ trans('blade-components::sp_blade_components.meta_keywords') }}:</label>
-        <input type="text" class="form-control" name="{{ $meta_keywords }}" value="{{ old($meta_keywords, isset($data) ? $data->meta_keywords : '') }}">
+        <input type="text" class="form-control" name="{{ $meta_keywords }}" value="{{ $getValue($meta_keywords) }}">
 
         @if ($errors->has($meta_keywords))
             <span class="help-block">{{ $errors->first($meta_keywords) }}</span>
@@ -21,7 +21,7 @@
 
     <div class="form-group{{ $errors->has($meta_description) ? ' has-error' : '' }}">
         <label>{{ trans('blade-components::sp_blade_components.meta_description') }}:</label>
-        <textarea class="form-control" name="{{ $meta_description }}" rows="6">{{ old($meta_description, isset($data) ? $data->meta_description : '') }}</textarea>
+        <textarea class="form-control" name="{{ $meta_description }}" rows="6">{{ $getValue($meta_description) }}</textarea>
 
         @if ($errors->has($meta_description))
             <span class="help-block">{{ $errors->first($meta_description) }}</span>
