@@ -74,6 +74,28 @@ In `config/blade-components.php` config file you should set your data.
         */
 
         'paginate_default_limit' => 25,
+
+        /*
+        |--------------------------------------------------------------------------
+        | Styles Default Stack
+        |--------------------------------------------------------------------------
+        |
+        | Styles to push in appropriate stack
+        | 
+        */
+
+        'styles_stack' => 'styles',
+
+        /*
+        |--------------------------------------------------------------------------
+        | Scripts Default Stack
+        |--------------------------------------------------------------------------
+        |
+        | Scripts to push in appropriate stack
+        | 
+        */
+
+        'scripts_stack' => 'scripts',
     ];
 ```
 

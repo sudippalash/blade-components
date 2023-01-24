@@ -1,4 +1,8 @@
-@include('blade-components::components.inc.img-input-css')
+@once
+    @push(config('blade-components.styles_stack'))
+        @include('blade-components::components.inc.img-input-css')
+    @endpush
+@endonce
 
 <div class="sp-img-upload" id="{{ $fileId }}">
     <div class="sp-img-upload-wrap" id="{{ $fileId }}_sp_img_upload_wrap" @if($filePath)style="display:none;"@endif>
@@ -26,5 +30,8 @@
     <span class="help-block">{{ $message }}</span>
 @enderror
 
-@include('blade-components::components.inc.img-input-js')
-
+@once
+    @push(config('blade-components.scripts_stack'))
+        @include('blade-components::components.inc.img-input-js')
+    @endpush
+@endonce

@@ -1,31 +1,36 @@
-<style>
-    .sp-pagi-msg {
-        font-size: 14px;
-        color: #999;
-        line-height: 30px;
-        font-weight: 500;
-    }
-    @media (max-width:767.98px) {
-        .sp-pagi-msg {
-            text-align: center;
-        }
-    }
-    .sp-pagi-limit-box {
-        display: flex;
-        justify-content: center;
-    }
-    @media (min-width: 768px) {
-        .sp-pagi-limit-box {
-            justify-content: flex-end;
-        }
-        .sp-pagi-limit-box-body {
-            width: 170px !important;
-        }
-    }
-    .sp-pagi-limit {
-        width:80px !important;
-    }
-</style>
+@once
+    @push(config('blade-components.styles_stack'))
+        <style>
+            .sp-pagi-msg {
+                font-size: 14px;
+                color: #999;
+                line-height: 30px;
+                font-weight: 500;
+            }
+            @media (max-width:767.98px) {
+                .sp-pagi-msg {
+                    text-align: center;
+                }
+            }
+            .sp-pagi-limit-box {
+                display: flex;
+                justify-content: center;
+            }
+            @media (min-width: 768px) {
+                .sp-pagi-limit-box {
+                    justify-content: flex-end;
+                }
+                .sp-pagi-limit-box-body {
+                    width: 170px !important;
+                }
+            }
+            .sp-pagi-limit {
+                width:80px !important;
+            }
+        </style>
+    @endpush
+@endonce
+
 <div class="row">
     <div class="col-sm-3 sp-pagi-msg">{!! $paginationMessage !!}</div>
 
@@ -49,9 +54,14 @@
         </div>
     </div>
 </div>
-<script>
-    document.getElementById("sp-pagi-limit").addEventListener("change", myFunction);
-    function myFunction() {
-        window.location.href = document.getElementById("sp-pagi-limit").value;
-    }
-</script>
+
+@once
+    @push(config('blade-components.scripts_stack'))
+        <script>
+            document.getElementById("sp-pagi-limit").addEventListener("change", myFunction);
+            function myFunction() {
+                window.location.href = document.getElementById("sp-pagi-limit").value;
+            }
+        </script>
+    @endpush
+@endonce
