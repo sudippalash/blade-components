@@ -40,8 +40,8 @@
     }
     .sp-img-upload .sp-img-upload-content .sp-img-upload-box {
         position: relative;
-        max-height: 200px;
-        max-width: 200px;
+        /* max-height: 300px; */
+        max-width: 300px;
         margin: auto;
     }
     .sp-img-upload .sp-img-upload-content .img-btn-wrap {
