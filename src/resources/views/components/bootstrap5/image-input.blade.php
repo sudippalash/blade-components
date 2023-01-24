@@ -9,11 +9,15 @@
     <div class="sp-img-upload-content" id="{{ $fileId }}_sp_img_upload_content" @if(!$filePath)style="display:none;"@endif>
         <div class="sp-img-upload-box" id="{{ $fileId }}_sp_img_upload_box">
             @if ($filePath)
-                <img src="{{ $filePath }}" class="img-fluid" />
+            <div class="sp-img-container">
+                <img src="{{ $filePath }}" class="sp-img-container-image" />
+                <div class="sp-img-overlay">
+                    <a class="sp-img-overlay-icon">
+                        <button type="button" onclick="spRemoveImage('{{ $fileId }}')" class="btn btn-danger btn-sm btn-flat">x</button>
+                    </a>
+                </div>
+            </div>
             @endif
-        </div>
-        <div class="img-btn-wrap">
-            <button type="button" onclick="spRemoveImage('{{ $fileId }}')" class="btn btn-danger btn-sm btn-flat">x</button>
         </div>
     </div>
 </div>

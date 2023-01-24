@@ -48,4 +48,37 @@
         padding: 0 15px 15px 15px;
         color: #222;
     }
+    .sp-img-container {
+        position: relative;
+        width: 100%;
+    }
+    .sp-img-container-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .sp-img-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background: rgba(0, 0, 0, 0);
+    }
+    .sp-img-container:hover .sp-img-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .sp-img-overlay-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
 </style>
