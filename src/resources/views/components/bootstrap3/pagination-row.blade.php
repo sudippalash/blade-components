@@ -1,34 +1,38 @@
-<style>
-    .sp-pagi-msg {
-        font-size: 14px;
-        color: #999;
-        line-height: 30px;
-        font-weight: 500;
-    }
-    @media (max-width:767.98px) {
-        .sp-pagi-msg {
-            text-align: center;
-        }
-    }
-    .sp-pagi-limit-box {
-        display: flex;
-        justify-content: center;
-    }
-    @media (min-width: 768px) {
-        .sp-pagi-limit-box {
-            justify-content: flex-end;
-        }
-        .sp-pagi-limit-box-body {
-            width: 170px !important;
-        }
-    }
-    .sp-pagi-limit {
-        width:80px !important;
-    }
-    .sp-pagination .pagination {
-        margin: 0;
-    }
-</style>
+@once
+    @push(config('blade-components.styles_stack'))
+        <style>
+            .sp-pagi-msg {
+                font-size: 14px;
+                color: #999;
+                line-height: 30px;
+                font-weight: 500;
+            }
+            @media (max-width:767.98px) {
+                .sp-pagi-msg {
+                    text-align: center;
+                }
+            }
+            .sp-pagi-limit-box {
+                display: flex;
+                justify-content: center;
+            }
+            @media (min-width: 768px) {
+                .sp-pagi-limit-box {
+                    justify-content: flex-end;
+                }
+                .sp-pagi-limit-box-body {
+                    width: 170px !important;
+                }
+            }
+            .sp-pagi-limit {
+                width:80px !important;
+            }
+            .sp-pagination .pagination {
+                margin: 0;
+            }
+        </style>
+    @endpush
+@endonce
 <div class="row">
     <div class="col-sm-3 sp-pagi-msg">{!! $paginationMessage !!}</div>
 

@@ -11,11 +11,15 @@
     @endif
     <a style="text-decoration: none;" class="badge label-danger" href="javascript:void(0);" onclick="spRemoveFile('{{ $fileId }}')" title="Delete">x</a>
 </div>
-    
-<script>
-    function spRemoveFile(id) {
-        document.getElementById(`${id}_is_removed`).value = 1;
-        document.getElementById(`${id}_file`).value = null;
-        document.getElementById(`${id}_file_upload_content`).style.display = 'none';
-    }
-</script>
+
+@once
+    @push(config('blade-components.scripts_stack'))
+        <script>
+            function spRemoveFile(id) {
+                document.getElementById(`${id}_is_removed`).value = 1;
+                document.getElementById(`${id}_file`).value = null;
+                document.getElementById(`${id}_file_upload_content`).style.display = 'none';
+            }
+        </script>
+    @endpush
+@endonce
