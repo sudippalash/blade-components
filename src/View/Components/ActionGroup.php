@@ -6,6 +6,8 @@ use Illuminate\View\Component;
 
 class ActionGroup extends Component
 {
+    public $btnClass;
+
     /**
      * Create a new component instance.
      *
@@ -13,6 +15,7 @@ class ActionGroup extends Component
      */
     public function __construct()
     {
+        $this->btnClass = config('blade-components.action_group_btn_class');
     }
 
     /**
