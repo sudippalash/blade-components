@@ -18,7 +18,7 @@ class ImportModal extends Component
      *
      * @return void
      */
-    public function __construct($id, $postUrl, $label = 'Upload File', $fileType = 'xlsx', $exampleFilePath = null)
+    public function __construct($id, $postUrl, $label = 'Upload File', $fileType = '.xlsx', $exampleFilePath = null)
     {
         $this->btnClass = config('blade-components.import_modal_btn_class');
         $this->modalId = $id;

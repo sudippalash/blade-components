@@ -15,8 +15,8 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('file') ? ' has-error' : '' }}">
-                        <label class="required">{{ $fileType }}:</label>
-                        <input type="file" class="form-control" name="file" required>
+                        <label class="required">{{ $fileType }}</label>
+                        <input type="file" class="form-control" name="file" required accept="{{ $fileType }}">
 
                         @if ($errors->has('file'))
                             <span class="help-block">{{ $errors->first('file') }}</span>
