@@ -8,7 +8,7 @@
                 <img src="${e.target.result}" class="sp-img-container-image" />
                 <div class="sp-img-overlay">
                     <a class="sp-img-overlay-icon">
-                        <button type="button" onclick="spRemoveImage('${id}')" class="btn btn-danger btn-sm btn-flat">x</button>
+                        <button type="button" onclick="spRemoveImage('${id}')" class="btn btn-danger btn-sm">x</button>
                     </a>
                 </div>
             </div>`;
