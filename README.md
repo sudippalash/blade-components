@@ -4,7 +4,6 @@
 
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
 
@@ -77,6 +76,28 @@ In `config/blade-components.php` config file you should set your data.
 
         /*
         |--------------------------------------------------------------------------
+        | Action Group button CSS class
+        |--------------------------------------------------------------------------
+        |
+        | You can add additional class name as per your project requirment
+        | 
+        */
+
+        'action_group_btn_class' => null,
+
+        /*
+        |--------------------------------------------------------------------------
+        | Import modal button CSS class
+        |--------------------------------------------------------------------------
+        |
+        | You can add additional class name as per your project requirment
+        | 
+        */
+
+        'import_modal_btn_class' => null,
+
+        /*
+        |--------------------------------------------------------------------------
         | Styles Default Stack
         |--------------------------------------------------------------------------
         |
@@ -128,9 +149,16 @@ In `config/blade-components.php` config file you should set your data.
 <x-sp-components::image-input id="uniqueId" name="field_name" required="required" multiple="multiple" path="https://exapmle.com/image.png" />
 ```
 
+#### 6. Import Modal:
+```php
+<a href="javascript:void(0);" data-toggle="modal" data-target="#userImportModal">Import Users</a>
+
+<x-sp-components::import-modal id="userImportModal" postUrl="{{ 'your route name' }}" label="Import Users" fileType=".xlsx,.csv" exampleFilePath="{{ 'your example asset file path' }}" />
+```
+
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+<!-- The MIT License (MIT). Please see [License File](LICENSE.md) for more information. -->
 
 [ico-version]: https://img.shields.io/packagist/v/sudippalash/blade-components?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/sudippalash/blade-components?style=flat-square
