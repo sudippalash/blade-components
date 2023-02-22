@@ -1,5 +1,5 @@
 <input type="hidden" name="{{ $fileId }}_is_removed" id="{{ $fileId }}_is_removed" value="0" />
-<input type="file" class="form-control{{ $errors->has($inputName) ? ' is-invalid' : '' }}" id="{{ $fileId }}_file" name="{{ $inputName }}" {{ $multiple }} {{ $required }}>
+<input type="file" class="form-control{{ $errors->has($inputName) ? ' is-invalid' : '' }}" id="{{ $fileId }}_file" name="{{ $inputName }}" {{ $required }}>
 
 @error($inputName)
     <span class="invalid-feedback d-block">{{ $message }}</span>

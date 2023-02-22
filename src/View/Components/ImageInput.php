@@ -9,7 +9,6 @@ class ImageInput extends Component
     public $fileId;
     public $inputName;
     public $required;
-    public $multiple;
     public $filePath;
 
     /**
@@ -17,12 +16,11 @@ class ImageInput extends Component
      *
      * @return void
      */
-    public function __construct($id = 'image', $name = 'image', $required = null, $multiple = null, $path = null)
+    public function __construct($id = 'image', $name = 'image', $required = null, $path = null)
     {
         $this->fileId = $id;
         $this->inputName = $name;
         $this->required = $required;
-        $this->multiple = $multiple;
         $this->filePath = $path;
     }
 

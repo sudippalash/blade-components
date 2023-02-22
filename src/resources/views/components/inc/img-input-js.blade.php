@@ -5,13 +5,13 @@
             reader.onload = function(e) {
                 document.getElementById(`${id}_sp_img_upload_wrap`).style.display = 'none';
                 document.getElementById(`${id}_sp_img_upload_box`).innerHTML = `<div class="sp-img-container">
-                <img src="${e.target.result}" class="sp-img-container-image" />
-                <div class="sp-img-overlay">
-                    <a class="sp-img-overlay-icon">
-                        <button type="button" onclick="spRemoveImage('${id}')" class="btn btn-danger btn-sm">x</button>
-                    </a>
-                </div>
-            </div>`;
+                    <img src="${e.target.result}" class="sp-img-container-image" />
+                    <div class="sp-img-overlay">
+                        <a class="sp-img-overlay-icon">
+                            <button type="button" onclick="spRemoveImage('${id}')" class="btn btn-danger btn-sm">x</button>
+                        </a>
+                    </div>
+                </div>`;
                 document.getElementById(`${id}_sp_img_upload_content`).style.display = 'block';
                 
                 document.getElementById(`${id}_is_removed`).value = 0;

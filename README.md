@@ -141,12 +141,12 @@ In `config/blade-components.php` config file you should set your data.
 
 #### 4. File Input Field:
 ```php
-<x-sp-components::file-input id="uniqueId" name="field_name" required="required" multiple="multiple" path="https://exapmle.com/image.png" />
+<x-sp-components::file-input id="uniqueId" name="field_name" required="required" path="https://exapmle.com/file.pdf" />
 ```
 
 #### 5. Image Input Field:
 ```php
-<x-sp-components::image-input id="uniqueId" name="field_name" required="required" multiple="multiple" path="https://exapmle.com/image.png" />
+<x-sp-components::image-input id="uniqueId" name="field_name" required="required" path="https://exapmle.com/image.png" />
 ```
 
 #### 6. Import Modal:
