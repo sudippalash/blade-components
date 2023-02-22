@@ -8,7 +8,7 @@
     <div class="sp-img-upload-wrap" id="{{ $fileId }}_sp_img_upload_wrap" @if($filePath)style="display:none;"@endif>
         <input type="hidden" name="{{ $fileId }}_is_removed" id="{{ $fileId }}_is_removed" value="0" />
         <input type="file" class="sp-img-upload-input" name="{{ $inputName }}" id="{{ $fileId }}_file" onchange="spReadUpload(this, '{{ $fileId }}');" accept="image/*" {{ $multiple }} {{ $required }}>
-        <h3>Drag and drop a Image or select a Image</h3>
+        <h3>{{ trans('blade-components::sp_blade_components.drag_and_drop_text') }}</h3>
     </div>
     <div class="sp-img-upload-content" id="{{ $fileId }}_sp_img_upload_content" @if(!$filePath)style="display:none;"@endif>
         <div class="sp-img-upload-box" id="{{ $fileId }}_sp_img_upload_box">
