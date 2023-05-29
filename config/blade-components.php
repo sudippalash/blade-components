@@ -78,4 +78,16 @@ return [
     */
 
     'scripts_stack' => 'scripts',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Seo Meta Default Section
+    |--------------------------------------------------------------------------
+    |
+    | SEO Tag section push in appropriate yield. This is for <x-sp-components::seo-meta-push /> component.
+    | If you leave it null then you should pass your own section name to sectionName parameter.
+    | 
+    */
+
+    'seo_section' => 'seo',
 ];

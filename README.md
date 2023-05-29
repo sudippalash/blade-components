@@ -117,6 +117,18 @@ In `config/blade-components.php` config file you should set your data.
         */
 
         'scripts_stack' => 'scripts',
+
+        /*
+        |--------------------------------------------------------------------------
+        | Seo Meta Default Section
+        |--------------------------------------------------------------------------
+        |
+        | SEO Tag section push in appropriate yield. This is for <x-sp-components::seo-meta-push /> component.
+        | If you leave it null then you should pass your own section name to sectionName parameter.
+        | 
+        */
+
+        'seo_section' => 'seo',
     ];
 ```
 
@@ -134,26 +146,39 @@ In `config/blade-components.php` config file you should set your data.
 </x-sp-components::action-group>
 ```
 
-#### 3. Seo Input Fields:
-```php
-<x-sp-components::seo-meta-input title_field="meta_title" keywords_field="meta_keywords" description_field="meta_description" :data="$data" />
-```
-
-#### 4. File Input Field:
+#### 3. File Input Field:
 ```php
 <x-sp-components::file-input id="uniqueId" name="field_name" required="required" path="https://exapmle.com/file.pdf" />
 ```
 
-#### 5. Image Input Field:
+#### 4. Image Input Field:
 ```php
 <x-sp-components::image-input id="uniqueId" name="field_name" required="required" path="https://exapmle.com/image.png" />
 ```
 
-#### 6. Import Modal:
+#### 5. Import Modal:
 ```php
 <a href="javascript:void(0);" data-toggle="modal" data-target="#userImportModal">Import Users</a>
 
 <x-sp-components::import-modal id="userImportModal" postUrl="{{ 'your route name' }}" label="Import Users" fileType=".xlsx,.csv" exampleFilePath="{{ 'your example asset file path' }}" />
+```
+
+#### 6. SEO Input Fields:
+```php
+<x-sp-components::seo-meta-input title_field="meta_title" keywords_field="meta_keywords" description_field="meta_description" :data="$data" />
+```
+
+#### 7. SEO data push to main blade File:
+```php
+<x-sp-components::seo-meta-push
+    :pageTitle="<title> tag value pass here"
+    :title="meta title pass here"
+    :keywords="meta keywords pass here"
+    :description="meta description pass here"
+    :image="meta property image pass here"
+    :is_og=true
+    :sectionName=null
+/>
 ```
 
 ## License
