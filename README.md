@@ -24,13 +24,13 @@ You can publish the config file with:
 php artisan vendor:publish --provider="Sudip\BladeComponents\Providers\AppServiceProvider" --tag=config
 ```
 
-You can publish the lang file with:
+You can publish the lang file with (optional):
 
 ```bash
 php artisan vendor:publish --provider="Sudip\BladeComponents\Providers\AppServiceProvider" --tag=lang
 ```
 
-You can publish blade files with:
+You can publish blade files with (optional):
 
 ```bash
 php artisan vendor:publish --provider="Sudip\BladeComponents\Providers\AppServiceProvider" --tag=views
@@ -50,7 +50,7 @@ In `config/blade-components.php` config file you should set your data.
         | 
         */
 
-        'platform' => 'bootstrap4',
+        'platform' => 'bootstrap5',
 
         /*
         |--------------------------------------------------------------------------
@@ -120,6 +120,28 @@ In `config/blade-components.php` config file you should set your data.
 
         /*
         |--------------------------------------------------------------------------
+        | Seo Meta Form
+        |--------------------------------------------------------------------------
+        |
+        | SEO Tag input append your form. This is for <x-sp-components::seo-meta-input /> component.
+        | background_color : null or any css color. Example: null, rgba(0,0,0,.02), #fofofo
+        | background_padding : null or any css support padding. Example: null, 15px, 1rem
+        | title_show : true or false. If you want to hide or show title.
+        | label_col : bootstrap col- class name. If you want to show horizontal label otherwise leave it to null. Example: null, col-md-*
+        | input_col : bootstrap col- class name. If you want to show horizontal input otherwise leave it to null. Example: null, col-md-*
+        | 
+        */
+
+        'seo_form' => [
+            'background_color' => null,
+            'background_padding' => null,
+            'title_show' => true,
+            'label_col' => null,
+            'input_col' => null,
+        ],
+
+        /*
+        |--------------------------------------------------------------------------
         | Seo Meta Default Section
         |--------------------------------------------------------------------------
         |
@@ -160,12 +182,23 @@ In `config/blade-components.php` config file you should set your data.
 ```php
 <a href="javascript:void(0);" data-toggle="modal" data-target="#userImportModal">Import Users</a>
 
-<x-sp-components::import-modal id="userImportModal" postUrl="{{ 'your route name' }}" label="Import Users" fileType=".xlsx,.csv" exampleFilePath="{{ 'your example asset file path' }}" />
+<x-sp-components::import-modal 
+    id="userImportModal" 
+    postUrl="{{ 'your route name' }}" 
+    label="Import Users" 
+    fileType=".xlsx,.csv" 
+    exampleFilePath="{{ 'your example asset file path' }}" 
+/>
 ```
 
 #### 6. SEO Input Fields:
 ```php
-<x-sp-components::seo-meta-input title_field="meta_title" keywords_field="meta_keywords" description_field="meta_description" :data="$data" />
+<x-sp-components::seo-meta-input 
+    title_field="meta_title" 
+    keywords_field="meta_keywords" 
+    description_field="meta_description" 
+    :data="$data ?? null" 
+/>
 ```
 
 #### 7. SEO data push to main blade File:

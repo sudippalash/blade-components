@@ -11,7 +11,7 @@ return [
     | 
     */
 
-    'platform' => 'bootstrap4',
+    'platform' => 'bootstrap5',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,6 +78,28 @@ return [
     */
 
     'scripts_stack' => 'scripts',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Seo Meta Form
+    |--------------------------------------------------------------------------
+    |
+    | SEO Tag input append your form. This is for <x-sp-components::seo-meta-input /> component.
+    | background_color : null or any css color. Example: null, rgba(0,0,0,.02), #fofofo
+    | background_padding : null or any css support padding. Example: null, 15px, 1rem
+    | title_show : true or false. If you want to hide or show title.
+    | label_col : bootstrap col- class name. If you want to show horizontal label otherwise leave it to null. Example: null, col-md-*
+    | input_col : bootstrap col- class name. If you want to show horizontal input otherwise leave it to null. Example: null, col-md-*
+    | 
+    */
+
+    'seo_form' => [
+        'background_color' => null,
+        'background_padding' => null,
+        'title_show' => true,
+        'label_col' => null,
+        'input_col' => null,
+    ],
 
     /*
     |--------------------------------------------------------------------------

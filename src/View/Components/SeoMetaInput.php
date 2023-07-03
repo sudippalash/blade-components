@@ -10,6 +10,7 @@ class SeoMetaInput extends Component
     public $meta_keywords;
     public $meta_description;
     public $seoData;
+    public $seoForm;
 
     /**
      * Create a new component instance.
@@ -22,6 +23,30 @@ class SeoMetaInput extends Component
         $this->meta_keywords = $keywords_field;
         $this->meta_description = $description_field;
         $this->seoData = $data;
+
+        $style = null;
+        if (config('blade-components.seo_form.background_color')) {
+            $style .= 'background-color:'. config('blade-components.seo_form.background_color') .';';
+        }
+        if (config('blade-components.seo_form.background_padding')) {
+            $style .= 'padding:'. config('blade-components.seo_form.background_padding') .';';
+        }
+        
+        $labelCol = null;
+        if (config('blade-components.seo_form.label_col')) {
+            $labelClass = config('blade-components.platform') == 'bootstrap3' ? 'control-label ' : 'col-form-label ';
+            $labelCol = 'class="'. $labelClass . config('blade-components.seo_form.label_col') .'"';
+        }
+        
+        $inputCol = null;
+        if (config('blade-components.seo_form.input_col')) {
+            $inputCol = 'class="'. config('blade-components.seo_form.input_col') .'"';
+        }
+        $this->seoForm = [
+            'style' => $style,
+            'label_col' => $labelCol,
+            'input_col' => $inputCol,
+        ];
     }
 
     /**
