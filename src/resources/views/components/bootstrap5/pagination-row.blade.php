@@ -43,7 +43,7 @@
             <div class="input-group sp-pagi-limit-box-body">
                 <span class="input-group-text">{{ trans('blade-components::sp_blade_components.paginate') }}:</span>
                 <select class="form-select sp-pagi-limit" id="sp-pagi-limit" name="limit">
-                    @foreach(config('blade-components.paginations') as $pag)
+                    @foreach(config('blade-components.pagination_options') as $pag)
                         <option value="{{ $paginationUrl }}limit={{ $pag }}" {{ ($pag == (request('limit') ?? config('blade-components.paginate_default_limit'))) ? 'selected' : '' }}>{{ $pag }}</option>
                     @endforeach
                 </select>

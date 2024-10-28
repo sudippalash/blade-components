@@ -15,14 +15,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Paginations
+    | Pagination
     |--------------------------------------------------------------------------
     |
-    | Paginations dropdown use in your application. Example: ['15', '25', '50', '100']
+    | Pagination dropdown use in your application. Example: ['15', '25', '50', '100']
     | 
     */
 
-    'paginations' => ['15', '25', '50', '100'],
+    'pagination_options' => ['15', '25', '50', '100'],
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ return [
     | Action Group button CSS class
     |--------------------------------------------------------------------------
     |
-    | You can add additional class name as per your project requirment
+    | You can add additional class name as per your project requirement
     | 
     */
 
@@ -51,7 +51,7 @@ return [
     | Import modal button CSS class
     |--------------------------------------------------------------------------
     |
-    | You can add additional class name as per your project requirment
+    | You can add additional class name as per your project requirement
     | 
     */
 
@@ -85,7 +85,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | SEO Tag input append your form. This is for <x-sp-components::seo-meta-input /> component.
-    | background_color : null or any css color. Example: null, rgba(0,0,0,.02), #fofofo
+    | background_color : null or any css color. Example: null, rgba(0,0,0,.02), #F0F0F0
     | background_padding : null or any css support padding. Example: null, 15px, 1rem
     | title_show : true or false. If you want to hide or show title.
     | label_col : bootstrap col- class name. If you want to show horizontal label otherwise leave it to null. Example: null, col-md-*

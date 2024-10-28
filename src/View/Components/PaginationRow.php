@@ -31,7 +31,7 @@ class PaginationRow extends Component
         }
 
         //Pagination Dropdown item init
-        $this->paginationDropdown = config('blade-components.paginations');
+        $this->paginationDropdown = config('blade-components.pagination_options');
         if (!is_array($this->paginationDropdown)) {
             $this->paginationDropdown = [];
         }

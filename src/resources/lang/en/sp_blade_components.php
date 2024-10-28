@@ -7,7 +7,7 @@ return [
     // pagination-row: Select label
     'paginate' => 'Per Page',
 
-    // image-input: Drag & Drom label
+    // image-input: Drag & Drop label
     'drag_and_drop_text' => 'Drag and drop an Image or select an Image',
 
     // seo-meta-input: Input field label
