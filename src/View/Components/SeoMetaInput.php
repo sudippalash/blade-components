@@ -7,9 +7,13 @@ use Illuminate\View\Component;
 class SeoMetaInput extends Component
 {
     public $meta_title;
+
     public $meta_keywords;
+
     public $meta_description;
+
     public $seoData;
+
     public $seoForm;
 
     /**
@@ -26,21 +30,21 @@ class SeoMetaInput extends Component
 
         $style = null;
         if (config('blade-components.seo_form.background_color')) {
-            $style .= 'background-color:'. config('blade-components.seo_form.background_color') .';';
+            $style .= 'background-color:'.config('blade-components.seo_form.background_color').';';
         }
         if (config('blade-components.seo_form.background_padding')) {
-            $style .= 'padding:'. config('blade-components.seo_form.background_padding') .';';
+            $style .= 'padding:'.config('blade-components.seo_form.background_padding').';';
         }
-        
+
         $labelCol = null;
         if (config('blade-components.seo_form.label_col')) {
             $labelClass = config('blade-components.platform') == 'bootstrap3' ? 'control-label ' : 'col-form-label ';
-            $labelCol = 'class="'. $labelClass . config('blade-components.seo_form.label_col') .'"';
+            $labelCol = 'class="'.$labelClass.config('blade-components.seo_form.label_col').'"';
         }
-        
+
         $inputCol = null;
         if (config('blade-components.seo_form.input_col')) {
-            $inputCol = 'class="'. config('blade-components.seo_form.input_col') .'"';
+            $inputCol = 'class="'.config('blade-components.seo_form.input_col').'"';
         }
         $this->seoForm = [
             'style' => $style,
@@ -57,12 +61,13 @@ class SeoMetaInput extends Component
     public function render()
     {
         $platform = config('blade-components.platform');
-        if (!in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
+        if (! in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
             $platform = 'bootstrap4';
         }
-        return view('blade-components::components.' . $platform . '.seo-meta-input');
+
+        return view('blade-components::components.'.$platform.'.seo-meta-input');
     }
-    
+
     public function getValue($key)
     {
         return old($key, isset($this->seoData) ? $this->seoData->{$key} : '');

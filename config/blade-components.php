@@ -8,7 +8,7 @@ return [
     |
     | Which platform you use in your application. Example: bootstrap3 or bootstrap4 or bootstrap5
     | Note: you should add platform CSS and JS library
-    | 
+    |
     */
 
     'platform' => 'bootstrap4',
@@ -19,7 +19,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Pagination dropdown use in your application. Example: ['15', '25', '50', '100']
-    | 
+    |
     */
 
     'pagination_options' => ['15', '25', '50', '100'],
@@ -30,7 +30,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Per page pagination limit default selected item dropdown use in your application. Example: 15 / 25 / 50 / 100
-    | 
+    |
     */
 
     'paginate_default_limit' => 25,
@@ -41,7 +41,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | You can add additional class name as per your project requirement
-    | 
+    |
     */
 
     'action_group_btn_class' => null,
@@ -52,7 +52,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | You can add additional class name as per your project requirement
-    | 
+    |
     */
 
     'import_modal_btn_class' => null,
@@ -63,7 +63,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Styles to push in appropriate stack
-    | 
+    |
     */
 
     'styles_stack' => 'styles',
@@ -74,7 +74,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Scripts to push in appropriate stack
-    | 
+    |
     */
 
     'scripts_stack' => 'scripts',
@@ -90,7 +90,7 @@ return [
     | title_show : true or false. If you want to hide or show title.
     | label_col : bootstrap col- class name. If you want to show horizontal label otherwise leave it to null. Example: null, col-md-*
     | input_col : bootstrap col- class name. If you want to show horizontal input otherwise leave it to null. Example: null, col-md-*
-    | 
+    |
     */
 
     'seo_form' => [
@@ -108,7 +108,7 @@ return [
     |
     | SEO Tag section push in appropriate yield. This is for <x-sp-components::seo-meta-push /> component.
     | If you leave it null then you should pass your own section name to sectionName parameter.
-    | 
+    |
     */
 
     'seo_section' => 'seo',

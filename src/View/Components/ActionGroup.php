@@ -26,9 +26,10 @@ class ActionGroup extends Component
     public function render()
     {
         $platform = config('blade-components.platform');
-        if (!in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
+        if (! in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
             $platform = 'bootstrap4';
         }
-        return view('blade-components::components.' . $platform . '.action-group');
+
+        return view('blade-components::components.'.$platform.'.action-group');
     }
 }

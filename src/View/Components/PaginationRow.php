@@ -7,9 +7,13 @@ use Illuminate\View\Component;
 class PaginationRow extends Component
 {
     public $records;
+
     public $paginationMessage;
+
     public $paginationDropdown;
+
     public $paginationUrl;
+
     /**
      * Create a new component instance.
      *
@@ -25,21 +29,21 @@ class PaginationRow extends Component
 
         //Pagination Message showing
         if ($this->records) {
-            $this->paginationMessage = 'Showing ' . $this->records->firstItem() . ' to ' . $this->records->lastItem().' of '.$this->records->total() . ' row(s)';
+            $this->paginationMessage = 'Showing '.$this->records->firstItem().' to '.$this->records->lastItem().' of '.$this->records->total().' row(s)';
         } else {
             $this->paginationMessage = null;
         }
 
         //Pagination Dropdown item init
         $this->paginationDropdown = config('blade-components.pagination_options');
-        if (!is_array($this->paginationDropdown)) {
+        if (! is_array($this->paginationDropdown)) {
             $this->paginationDropdown = [];
         }
 
         //Pagination URL generate
         $currentUrl = url()->current();
         if (request()->getQueryString()) {
-            $currentUrl .= '?' . request()->getQueryString() . '&';
+            $currentUrl .= '?'.request()->getQueryString().'&';
         } else {
             $currentUrl .= '?';
         }
@@ -54,9 +58,10 @@ class PaginationRow extends Component
     public function render()
     {
         $platform = config('blade-components.platform');
-        if (!in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
+        if (! in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
             $platform = 'bootstrap4';
         }
-        return view('blade-components::components.' . $platform . '.pagination-row');
+
+        return view('blade-components::components.'.$platform.'.pagination-row');
     }
 }

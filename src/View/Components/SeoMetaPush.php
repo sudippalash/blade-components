@@ -7,11 +7,17 @@ use Illuminate\View\Component;
 class SeoMetaPush extends Component
 {
     public $pageTitle;
+
     public $title;
+
     public $keywords;
+
     public $description;
+
     public $image;
+
     public $is_og;
+
     public $sectionName;
 
     /**

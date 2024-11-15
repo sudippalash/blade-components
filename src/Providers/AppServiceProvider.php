@@ -2,29 +2,28 @@
 
 namespace Sudip\BladeComponents\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../../config/blade-components.php', 'blade-components'
+            __DIR__.'/../../config/blade-components.php', 'blade-components'
         );
     }
 
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'blade-components');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'blade-components');
 
-        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'blade-components');
+        $this->loadTranslationsFrom(__DIR__.'/../lang', 'blade-components');
 
         $this->registerComponents();
 
-
         $this->publishes([
-            __DIR__ . '/../../config/blade-components.php' => config_path('blade-components.php'),
+            __DIR__.'/../../config/blade-components.php' => config_path('blade-components.php'),
         ], 'config');
 
         $this->publishes([

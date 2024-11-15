@@ -7,8 +7,11 @@ use Illuminate\View\Component;
 class ImageInput extends Component
 {
     public $fileId;
+
     public $inputName;
+
     public $required;
+
     public $filePath;
 
     /**
@@ -32,9 +35,10 @@ class ImageInput extends Component
     public function render()
     {
         $platform = config('blade-components.platform');
-        if (!in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
+        if (! in_array($platform, ['bootstrap3', 'bootstrap4', 'bootstrap5'])) {
             $platform = 'bootstrap4';
         }
-        return view('blade-components::components.' . $platform . '.image-input');
+
+        return view('blade-components::components.'.$platform.'.image-input');
     }
 }

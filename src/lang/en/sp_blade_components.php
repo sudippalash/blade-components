@@ -15,7 +15,7 @@ return [
     'meta_title' => 'Title',
     'meta_keywords' => 'Keywords',
     'meta_description' => 'Description',
-    
+
     // import-modal: Modal title, Example file text & button label
     'download_example_file' => 'Download example file',
     'click_here' => 'click here',
