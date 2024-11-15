@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'blade-components');
 
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'blade-components');
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'blade-components');
 
         $this->registerComponents();
 
@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/blade-components'),
+            __DIR__.'/../lang' => lang_path('vendor/blade-components'),
         ], 'lang');
 
         $this->publishes([
