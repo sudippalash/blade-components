@@ -1,5 +1,5 @@
 <div class="btn-group">
-    <button type="button" class="btn btn-light btn-sm {{ $btnClass }} dropdown-toggle" data-bs-toggle="dropdown">{!! trans('blade-components::sp_blade_components.action') !!}</button>
+    <button type="button" class="btn btn-sm {{ $btnClass ?? 'btn-light' }} dropdown-toggle" data-bs-toggle="dropdown">{!! trans('blade-components::sp_blade_components.action') !!}</button>
     <ul class="dropdown-menu dropdown-menu-end">
         {{ $slot }}
     </ul>
