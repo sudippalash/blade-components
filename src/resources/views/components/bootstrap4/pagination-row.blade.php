@@ -21,7 +21,7 @@
                     justify-content: flex-end;
                 }
                 .sp-pagi-limit-box-body {
-                    width: 170px !important;
+                    width: 190px !important;
                 }
             }
             .sp-pagi-limit {
