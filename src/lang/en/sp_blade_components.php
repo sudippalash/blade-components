@@ -20,4 +20,8 @@ return [
     'download_example_file' => 'Download example file',
     'click_here' => 'click here',
     'import' => 'Import',
+
+    'filter' => 'Filter',
+    'search' => 'Search',
+    'reset' => 'Reset',
 ];

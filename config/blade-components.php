@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'platform' => 'bootstrap4',
+    'platform' => 'bootstrap5',
 
     /*
     |--------------------------------------------------------------------------
@@ -112,4 +112,9 @@ return [
     */
 
     'seo_section' => 'seo',
+
+
+    'search_offcanvas' => false,
+    'search_btn_class' => 'btn-primary',
+    'reset_btn_class' => 'btn-info',
 ];
