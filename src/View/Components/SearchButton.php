@@ -7,6 +7,7 @@ use Illuminate\View\Component;
 class SearchButton extends Component
 {
     public $offcanvas;
+    public $filterButton;
 
     /**
      * Create a new component instance.
@@ -16,6 +17,7 @@ class SearchButton extends Component
     public function __construct($offcanvas = false)
     {
         $this->offcanvas = $offcanvas ?? config('blade-components.search_offcanvas');
+        $this->filterButton = config('blade-components.filter_btn_class') ?? 'btn-success';
     }
 
     /**

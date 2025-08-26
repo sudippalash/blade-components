@@ -113,8 +113,20 @@ return [
 
     'seo_section' => 'seo',
 
-
+    /*
+    |--------------------------------------------------------------------------
+    | Search Container
+    |--------------------------------------------------------------------------
+    |
+    | Search container show in offcanvas or accordion. This is for <x-sp-components::search-container /> and <x-sp-components::search-button /> components.
+    | search_offcanvas : true or false. If you want to show search container in offcanvas then set it to true otherwise false. offcanvas support in bootstrap 5 only.
+    | filter_btn_class : filter button class name. Example: btn-sm btn-success
+    | search_btn_class : search button class name. Example: btn-primary
+    | reset_btn_class : reset button class name. Example: btn-warning
+    |
+    */
     'search_offcanvas' => false,
+    'filter_btn_class' => 'btn-sm btn-success',
     'search_btn_class' => 'btn-primary',
-    'reset_btn_class' => 'btn-info',
+    'reset_btn_class' => 'btn-warning',
 ];
