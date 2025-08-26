@@ -231,7 +231,7 @@ return [
 />
 ```
 
-#### 8. Search Container
+#### 8. Search Container & Button(Optional)
 ```php
 <x-sp-components::search-container action="{your url}" :offcanvas="true">
     <div class="mb-3 col-md-4">
